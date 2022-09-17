@@ -1,14 +1,12 @@
 const hamburger = document.querySelector('.hamburger');
 const img = document.querySelector('#ham-img');
+const close = document.querySelector('#ham-img2');
 const smNav = document.querySelector('.sm-nav');
 const ul = document.querySelector('.flx ul');
 
 hamburger.onclick = function() {
-  let b = 'http://localhost:8158/images/icon-hamburger.svg';
-  if(img.src == b) {
-   img.src = '../images/icon-close.svg';
-  } else img.src = b;
-  
+  img.classList.toggle('mb')
+  close.classList.toggle('mb')
   smNav.classList.toggle('mb')
 }
 document.onclick = function(event) {
